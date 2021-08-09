@@ -1,7 +1,3 @@
-/**
- * @prettier
- */
-
 import axios from 'axios';
 
 export const GET_COVID_DATA = 'GET_COVID_DATA';
@@ -13,8 +9,7 @@ export const getCovidData = () => {
 		dispatch({ type: START_FETCHING });
 
 		axios.get(
-			'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/covid-19-qppza/service/REST-API/incoming_webhook/us_only?min_date=2020-04-27T00:00:00.000Z&max_date=2020-04-27T00:00:00.000Z&hide_fields=_id, date, country, combined_name, fips, uid'
-		)
+			'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/covid-19-qppza/service/REST-API/incoming_webhook/metadata')
 			.then((res) => {
 				console.log(
 					('API DATA =====> ', res.data)
