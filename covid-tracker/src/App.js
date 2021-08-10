@@ -26,7 +26,7 @@ function App() {
 				>
 					<Avatar
 						size={50}
-						icon="user"
+						src="./images/covid.ico"
 						style={{
 							float: 'left',
 						}}
