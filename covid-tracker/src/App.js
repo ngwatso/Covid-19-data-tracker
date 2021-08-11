@@ -7,31 +7,26 @@ import Title from 'antd/lib/typography/Title';
 const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
-	const colors = generate('#101010', {
-		theme: 'dark',
-		backgroundColor: '141414',
-	});
-	console.log(colors);
 
 	return (
 		<div className="App">
 			<Layout>
 				
-				<Header style={{ minHeight: '10vh', background: '#101010', /*border: '1px solid yellow' */}}>
+				<Header style={{ height: '10vh', background: '#101010'}}>
 				<Row style={{height: '100%'}} align='middle'>
+					<Col span={1}></Col>
 					<Col span={2}>
-					<Avatar	size={85}	src="./images/covid.ico" style={{ /*border: '1px solid yellow', */ float: 'left'	}}/>
+					<Avatar	size={85}	src="./images/covid.ico" style={{ float: 'left'	}}/>
 					</Col>
-					<Col span={22}>					
-					<Title style={{	/*border: '1px solid red', */ color: '#FFFAF0' }}	level={1}	>
+					<Col span={21}>					
+					<Title style={{	color: '#FFFAF0' }}	level={1}	>
 						Covid-19 Data	Tracker
 					</Title>
 					</Col>
 				</Row>
 				</Header>
-				
-				<Layout style={{minHeight: '75vh'}}>
-					<Sider style={{	background: '#65b7f3'	}}>
+				<Layout style={{height: '80vh'}}>
+					<Sider width={'25%'} style={{	background: '#65b7f3'	}}>
 						Sider
 					</Sider>
 					<Layout>
@@ -42,7 +37,7 @@ function App() {
 				</Layout>
 			</Layout>
 			<Layout>
-				<Footer	style={{ color: '#FFFAF0', background: '#414141' }}>
+				<Footer	style={{ height: '10vh', color: '#FFFAF0', background: '#414141' }}>
 					Footer
 				</Footer>
 			</Layout>
