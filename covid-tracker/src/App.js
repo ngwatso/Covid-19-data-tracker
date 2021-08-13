@@ -3,6 +3,7 @@ import './App.css';
 import { generate, presetDarkPallettes } from '@ant-design/colors';
 import { Layout, Avatar, Row, Col, Divider } from 'antd';
 import Title from 'antd/lib/typography/Title';
+import { StartDate } from './components/startDate'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -14,8 +15,7 @@ function App() {
 				
 				<Header style={{ height: '10vh', background: '#101010'}}>
 				<Row style={{height: '100%'}} align='middle'>
-					<Col span={1}></Col>
-					<Col span={2}>
+					<Col span={3}>
 					<Avatar	size={85}	src="./images/covid.ico" style={{ float: 'left'	}}/>
 					</Col>
 					<Col span={21}>					
@@ -26,11 +26,12 @@ function App() {
 				</Row>
 				</Header>
 				<Layout style={{height: '80vh'}}>
-					<Sider width={'25%'} style={{	background: '#65b7f3'	}}>
+					<Sider  width={'10%'} style={{background: '#DCDCDC'	}}>
 						Sider
 					</Sider>
 					<Layout>
 						<Content>
+							<StartDate />
 							Content
 						</Content>
 					</Layout>
