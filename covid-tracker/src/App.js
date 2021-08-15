@@ -4,6 +4,7 @@ import { generate, presetDarkPallettes } from '@ant-design/colors';
 import { Layout, Avatar, Row, Col, Divider } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import { StartDate } from './components/startDate'
+import { EndDate } from './components/endDate'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -31,7 +32,17 @@ function App() {
 					</Sider>
 					<Layout>
 						<Content>
-							<StartDate />
+							<Row style={{ height: '5%', background: '#B0C4DE'}} align='middle'>
+								<Col span={8}></Col>
+								<Col span={4}>
+								<StartDate />
+								</Col>
+								{/* <Col span={2}></Col> */}
+								<Col span={4}>
+								<EndDate />
+								</Col>
+								<Col span={8}></Col>
+							</Row>
 							Content
 						</Content>
 					</Layout>
